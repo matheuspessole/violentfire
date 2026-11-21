@@ -1,70 +1,110 @@
 
-# Violent Monkey
+# 🐒 Violent Fire
 
 <p align="center">
-  <img src="public/img/icons/logo.svg" width="100" alt="Violent Monkey Logo">
+  <img src="public/img/icons/logo.svg" width="120" alt="Violent Monkey Logo">
 </p>
 
-<h1 align="center">Violent Monkey</h1>
+<h1 align="center">Violent Fire</h1>
 
 <p align="center">
-  A simple and self-hosted file storage server.
+  A lightweight, self-hosted file storage server.
+</p>
+
+<p align="center">
+  Store and manage your files directly on your own server.
 </p>
 
 ---
 
-## About
+## 📖 About
 
-Violent Monkey is a personal file storage system built with Node.js and Express.
+**Violent Fire** is a simple, self-hosted file storage system built with Node.js and Express.
 
-It allows you to upload files through a web interface and store them directly on your own server, keeping everything in one place.
+It provides a straightforward way to upload and store files through a web interface, using your own server's storage instead of relying on external cloud storage services.
 
-## Features
+The goal is to give users control over their files, their storage, and their infrastructure.
 
-- Upload files through a web interface.
-- Store files locally on the server.
-- Simple and lightweight architecture.
-- Built with Node.js and Express.
-- Uses Multer to handle file uploads.
+## ✨ Features
 
-## Storage
+- 📤 Upload files through a simple web interface.
+- 💾 Store files directly on your server.
+- 📁 Keep uploaded files organized in a dedicated directory.
+- ⚡ Lightweight and easy to set up.
+- 🔧 Built with Node.js and Express.
+- 📦 Uses Multer for file upload handling.
+- 🖥️ Self-hosted storage with no external cloud storage dependency.
 
-All uploaded files are stored in the `uploads/` directory on the server.
+## 💾 Storage
 
-## Technologies
+All uploaded files are stored locally in the `uploads/` directory.
 
-- Node.js
-- Express
-- Multer
+This means your files remain on the machine hosting the Violent Monkey server, giving you direct control over your storage.
+
+**Important:** Uploaded files are stored on the server's disk. Make sure to create regular backups to prevent data loss.
+
+## 🛠️ Technologies
+
+- [Node.js](https://nodejs.org/)
+- [Express](https://expressjs.com/)
+- [Multer](https://github.com/expressjs/multer)
 - HTML
-- Tailwind CSS
-- Yarn
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Yarn](https://yarnpkg.com/)
 
-## Getting Started
+## 🚀 Getting Started
 
-Install the dependencies:
+### Prerequisites
+
+Before installing Violent Monkey, make sure you have:
+
+- **Node.js and NPM:** https://nodejs.org/
+- **Yarn:** https://classic.yarnpkg.com/lang/en/docs/install/
+- **Git:** https://git-scm.com/install/
+
+### Installation
+
+**1. Clone the repository**
+
+```bash
+git clone https://github.com/matheuspessole/violentfire.git
+```
+
+**2. Navigate to the project directory**
+
+```bash
+cd violentfire
+```
+
+**3. Install dependencies**
 
 ```bash
 yarn install
 ```
 
-Start the server:
+**4. Start the server**
 
 ```bash
 yarn start
 ```
 
-Open your browser and access:
+**5. Open Violent Monkey**
+
+Access the following address in your browser:
 
 ```text
 http://localhost:3000
 ```
 
-## Project Structure
+That's it! Your Violent Monkey server is running.
+
+## 📂 Project Structure
 
 ```text
-Violent-Monkey/
+violentfire/
 ├── public/
+│   ├── img/
+│   │   └── icons/
 │   ├── index.html
 │   └── ...
 ├── uploads/
@@ -73,8 +113,22 @@ Violent-Monkey/
 └── yarn.lock
 ```
 
+## 🔒 License
+
+Violent Monkey is licensed under the **PolyForm Noncommercial License 1.0.0**.
+
+You are allowed to use, study, modify, and share this software for noncommercial purposes, subject to the license terms.
+
+Commercial use is not permitted without separate authorization.
+
+See the [LICENSE](LICENSE) file for the complete license terms.
+
 ---
 
 <p align="center">
   Your server. Your storage. Your files.
+</p>
+
+<p align="center">
+  Made with 🔥 by Matthew.
 </p>
