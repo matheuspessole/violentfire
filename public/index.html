@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <base href="img/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Violent Fire</title>
+    <link rel="icon" type="image/png" href="icons/logo.svg">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-800">
+
+    <header class="sticky w-full h-16 bg-red-700 flex items-center justify-between gap-1">
+        <div class="flex items-center justify-start gap-1">
+            <img class="ml-2 w-12 h-12" src="icons/logo.svg">
+            <h2 class="text-white text-xl italic font-bold">Violent Fire</h2>
+            <h2 class="text-white text-xs font-light">By Matthew</h2>
+        </div>
+        
+        <div class="mr-2 flex items-center justify-end gap-1">
+            
+            <div onclick="abrir_popup()" class="flex bg-red-800 rounded-sm p-2 items-center justify-between gap-2 hover:cursor-pointer">
+                <img class="w-6 h-6 invert" src="icons/upload.svg">
+                <h2 class="text-white text-base font-md">Upload</h2>
+            </div>
+        </div>
+    </header>
+
+    <section id="popup" style="display: none;"
+        class="fixed inset-0 bg-black/60 flex items-center justify-center">
+
+        <div class="bg-gray-700 p-8 rounded-lg flex flex-col">
+
+            <h3 class="text-white mb-2">Put your file here</h3>
+
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+
+                <label for="arquivo"
+                    class="flex items-center justify-center flex-col rounded-xl p-2 hover:bg-gray-800 hover:cursor-pointer">
+
+                    <img class="invert w-16" src="icons/image-up.svg">
+
+                    <p id="arquivo_desc" class="text-center text-gray-100">Click here</p>
+
+                </label>
+
+                <input type="file" id="arquivo" name="arquivo" hidden>
+
+                <p id="nomeArquivo" class="text-white text-xs mt-2"></p>
+
+                <div class="flex items-center justify-center gap-4 mt-4">
+
+                    <button type="button" onclick="voltar()"
+                        class="bg-gray-800 text-white rounded-sm border border-gray-800 border-2 p-1 w-24 hover:cursor-pointer hover:bg-gray-900">
+                        Cancel
+                    </button>
+
+                    <button type="submit"
+                        class="bg-blue-700 text-white rounded-sm border border-blue-700 border-2 p-1 w-24 hover:cursor-pointer hover:bg-blue-800">
+                        Send
+                    </button>
+
+                </div>
+
+                
+            </form>
+        </div>
+    </section>
+
+    <main class="flex items-center justify-center mt-8 text-white flex-col text-center px-4">
+        <h1 class="text-3xl font-bold mb-3">Welcome to Violent Fire!</h1>
+
+        <p class="text-gray-300 text-base mb-2">
+            Your personal file storage server.
+        </p>
+
+        <p class="text-gray-400 text-sm max-w-lg">
+            Upload and manage your files directly through Violent Fire.
+            Every uploaded file is stored locally on the server, inside
+            its dedicated storage directory. Access your stored files
+            whenever you need them.
+        </p>
+
+        <p class="text-red-400 text-sm italic mt-4">
+            Your server. Your storage. Your files.
+        </p>
+    </main>
+
+    
+    <script src="../script.js"></script>
+</body>
+</html>
