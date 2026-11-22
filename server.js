@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 import multer from "multer"
 
-import settings from "./settings.json"
+import settings from "./settings.json" with { type: "json" };
 
 const app = express();
 // const router = express.Router();
