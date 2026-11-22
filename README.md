@@ -117,7 +117,6 @@ http://localhost:3000
 violentfire/
 ├── public/
 │   ├── img/
-│   │   └── icons/
 │   ├── index.html
 │   └── ...
 ├── uploads/
