@@ -56,7 +56,7 @@ This means your files remain on the machine hosting the Violent Monkey server, g
 
 ### Prerequisites
 
-Before installing Violent Monkey, make sure you have:
+Before installing Violent Fire, make sure you have:
 
 - **Node.js and NPM:** https://nodejs.org/
 - **Yarn:** https://classic.yarnpkg.com/lang/en/docs/install/
@@ -88,7 +88,7 @@ yarn install
 yarn start
 ```
 
-**5. Open Violent Monkey**
+**5. Open Violent Fire**
 
 Access the following address in your browser:
 
@@ -96,7 +96,7 @@ Access the following address in your browser:
 http://localhost:3000
 ```
 
-That's it! Your Violent Monkey server is running.
+That's it! Your Violent Fire server is running.
 
 ## 📂 Project Structure
 
@@ -115,7 +115,7 @@ violentfire/
 
 ## 🔒 License
 
-Violent Monkey is licensed under the **PolyForm Noncommercial License 1.0.0**.
+Violent Fire is licensed under the **PolyForm Noncommercial License 1.0.0**.
 
 You are allowed to use, study, modify, and share this software for noncommercial purposes, subject to the license terms.
 
