@@ -1,4 +1,3 @@
-
 # 🐒 Violent Fire
 
 <p align="center">
@@ -34,12 +33,16 @@ The goal is to give users control over their files, their storage, and their inf
 - 🔧 Built with Node.js and Express.
 - 📦 Uses Multer for file upload handling.
 - 🖥️ Self-hosted storage with no external cloud storage dependency.
+- ⚙️ Configurable server settings through settings.json.
+- 📏 Customizable maximum file upload size.
 
 ## 💾 Storage
 
-All uploaded files are stored locally in the `uploads/` directory.
+All uploaded files are stored locally in the `uploads/` directory by default.
 
-This means your files remain on the machine hosting the Violent Monkey server, giving you direct control over your storage.
+This means your files remain on the machine hosting the Violent Fire server, giving you direct control over your storage.
+
+You can customize the storage directory through the `upload_folder` property in `settings.json`.
 
 **Important:** Uploaded files are stored on the server's disk. Make sure to create regular backups to prevent data loss.
 
@@ -56,47 +59,58 @@ This means your files remain on the machine hosting the Violent Monkey server, g
 
 ### Prerequisites
 
-Before installing Violent Fire, make sure you have:
-
-- **Node.js and NPM:** https://nodejs.org/
-- **Yarn:** https://classic.yarnpkg.com/lang/en/docs/install/
-- **Git:** https://git-scm.com/install/
+- [Node.js and NPM](https://nodejs.org/)
+- [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/)
+- [Git](https://git-scm.com/install/)
 
 ### Installation
 
-**1. Clone the repository**
-
 ```bash
 git clone https://github.com/matheuspessole/violentfire.git
-```
-
-**2. Navigate to the project directory**
-
-```bash
 cd violentfire
-```
-
-**3. Install dependencies**
-
-```bash
 yarn install
-```
-
-**4. Start the server**
-
-```bash
 yarn start
 ```
 
-**5. Open Violent Fire**
+Open **http://localhost:3000** in your browser.
 
-Access the following address in your browser:
+## ⚡ Quick Install
 
-```text
-http://localhost:3000
+Run everything with one command:
+
+```bash
+git clone https://github.com/matheuspessole/violentfire.git && cd violentfire && yarn install && yarn start
 ```
 
-That's it! Your Violent Fire server is running.
+## ⚙️ Configuration
+
+Violent Fire uses a `settings.json` file in the project root.
+
+### Default settings.json
+
+Create the file if it doesn't exist:
+
+```json
+{
+  "port": 3000,
+  "upload_folder": "uploads",
+  "max_file_size_mb": 100
+}
+```
+
+| Property | Description | Default |
+|---|---|---|
+| `port` | Server port. | `3000` |
+| `upload_folder` | File storage directory. | `uploads` |
+| `max_file_size_mb` | Maximum upload size per file (MB). | `100` |
+
+**Port:** Use ports above `1023` to avoid requiring administrator/root privileges on most Unix-like systems. Ports below `1024` are privileged.
+
+**Upload folder:** Defines where uploaded files are stored. Ensure the server has permission to write to the directory.
+
+**Maximum file size:** Sets the upload limit in megabytes. For example, `250` allows files up to 250 MB.
+
+After changing the settings, restart the server if necessary.
 
 ## 📂 Project Structure
 
@@ -104,11 +118,11 @@ That's it! Your Violent Fire server is running.
 violentfire/
 ├── public/
 │   ├── img/
-│   │   └── icons/
 │   ├── index.html
 │   └── ...
 ├── uploads/
 ├── server.js
+├── settings.json
 ├── package.json
 └── yarn.lock
 ```

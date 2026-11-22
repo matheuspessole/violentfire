@@ -5,6 +5,10 @@ import multer from "multer"
 
 import settings from "./settings.json" with { type: "json" };
 
+if (settings.port <= 1023){
+  console.warn(`⚠️  Port ${settings.port} is privileged. May require root on some systems.`);
+}
+
 const app = express();
 // const router = express.Router();
 
